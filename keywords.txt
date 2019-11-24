@@ -1,9 +1,26 @@
-PseudoMuninNode         KEYWORD1
-PseudoMuninPlugin       KEYWORD1
-PseudoMuninPluginField  KEYWORD1
+PseudoMuninNode	KEYWORD1
+PseudoMuninPlugin	KEYWORD1
+PseudoMuninPluginField	KEYWORD1
 
-begin                   KEYWORD2
-acceptClient            KEYWORD2
-name                    KEYWORD2
-value                   KEYWORD2
-fetch                   KEYWORD2
+# PseudoMuninPluginField
+name	KEYWORD2
+value	KEYWORD2
+initialValue	KEYWORD2
+fetch	KEYWORD2
+
+# PseudoMuninPlugin
+name	KEYWORD2
+config	KEYWORD2
+fields	KEYWORD2
+numberOfFields	KEYWORD2
+
+# PseudoMuninNode
+begin	KEYWORD2
+acceptClient	KEYWORD2
+
+plugins	KEYWORD2
+numberOfPlugins	KEYWORD2
+maxClients	KEYWORD2
+timeoutMilliseconds	KEYWORD2
+hostname	KEYWORD2
+port	KEYWORD2
