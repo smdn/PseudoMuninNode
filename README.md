@@ -13,4 +13,4 @@ see [examples](/examples) directory
 This software is released under the MIT License, see [LICENSE](/LICENSE).
 
 # For more information
-see https://smdn.jp/electronics/esp32-PseudoMuninNode/
+see https://smdn.jp/electronics/PseudoMuninNode/
