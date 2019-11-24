@@ -29,7 +29,7 @@
 
 class PseudoMuninNode {
   public:
-    static constexpr const char* VERSION = "1.0.0";
+    static constexpr const char* VERSION = "1.0.1";
 
     static constexpr uint32_t DEFAULT_TIMEOUT_MILLISECONDS = 32 * 1000;
     static constexpr const char* DEFAULT_HOSTNAME = "espressif32.localdomain";
