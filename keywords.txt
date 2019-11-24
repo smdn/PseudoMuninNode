@@ -1,0 +1,9 @@
+PseudoMuninNode         KEYWORD1
+PseudoMuninPlugin       KEYWORD1
+PseudoMuninPluginField  KEYWORD1
+
+begin                   KEYWORD2
+acceptClient            KEYWORD2
+name                    KEYWORD2
+value                   KEYWORD2
+fetch                   KEYWORD2
