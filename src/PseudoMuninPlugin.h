@@ -19,11 +19,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#include <Arduino.h>
-#include <functional> // std::function
-
 #ifndef PseudoMuninPlugin_h
 #define PseudoMuninPlugin_h
+
+#include <Arduino.h>
+#include <functional> // std::function
 
 struct PseudoMuninPluginField {
   using FetchFunction = std::function<void(PseudoMuninPluginField*)>;

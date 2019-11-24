@@ -19,13 +19,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#ifndef PseudoMuninNode_h
+#define PseudoMuninNode_h
+
 #include <Arduino.h>
 #include <WiFi.h>
 
 #include "PseudoMuninPlugin.h"
-
-#ifndef PseudoMuninNode_h
-#define PseudoMuninNode_h
 
 class PseudoMuninNode {
   public:
