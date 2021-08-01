@@ -14,3 +14,7 @@ This software is released under the MIT License, see [LICENSE](/LICENSE).
 
 # For more information
 see https://smdn.jp/electronics/PseudoMuninNode/
+
+# Smdn.Net.MuninNode
+
+[Smdn.Net.MuninNode](https://github.com/smdn/Smdn.Net.MuninNode), the .NET implementation of Munin-Node and Munin-Plugin is also available.
