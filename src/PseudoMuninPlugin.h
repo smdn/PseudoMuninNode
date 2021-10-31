@@ -35,11 +35,13 @@ struct PseudoMuninPluginField {
   ) :
     name(name),
     value(initialValue),
+    isValueUnknown(false),
     fetch(fetch)
   {};
 
   const String name;
   double value;
+  bool isValueUnknown;
   const FetchFunction fetch;
 };
 

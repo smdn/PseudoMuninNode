@@ -177,7 +177,11 @@ void PseudoMuninNode::processCommandFetch(WiFiClient& client, const String& comm
         if (field->fetch)
           field->fetch(field);
 
-        writeResponse(field->name + ".value " + field->value, client);
+        if (field->isValueUnknown)
+          // reports "U"(UNKNOWN) as field value
+          writeResponse(field->name + ".value U", client);
+        else
+          writeResponse(field->name + ".value " + field->value, client);
       }
 
       writeResponse(".", client);
