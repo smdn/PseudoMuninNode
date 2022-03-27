@@ -24,7 +24,11 @@
 // This example shows how to report UNKNOWN/"U" plugin field value to munin.
 // If you set `true` to PseudoMuninPluginField.isValueUnknown, PseudoMuninNode will report UNKNOWN as a field value.
 
+#ifdef ARDUINO_ESP8266_VERSION
+#include <ESP8266WiFi.h>
+#else
 #include <WiFi.h>
+#endif
 #include <PseudoMuninNode.h>
 
 #define NUMBER_OF_ROOMS 2
