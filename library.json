@@ -1,9 +1,9 @@
 {
   "name": "PseudoMuninNode",
-  "description": "A library to run munin-node compatible pseudo server on ESP32/ESP8266.",
+  "description": "A library to run munin-node compatible pseudo server on the devices that supports Wi-Fi like ESP32 and similar ones.",
   "version": "1.0.3",
   "frameworks": "arduino",
-  "platforms": "espressif32/esp8266",
+  "platforms": ["espressif32", "espressif8266"],
   "license": "MIT",
   "keywords": "munin,munin-node,monitoring",
   "repository": {
