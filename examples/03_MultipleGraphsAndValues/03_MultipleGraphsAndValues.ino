@@ -19,7 +19,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#ifdef ARDUINO_ESP8266_VERSION
+#include <ESP8266WiFi.h>
+#else
 #include <WiFi.h>
+#endif
+
 #include <PseudoMuninNode.h>
 
 PseudoMuninPluginField fields_uptime[] = {
@@ -30,6 +35,21 @@ PseudoMuninPluginField fields_uptime[] = {
 };
 
 PseudoMuninPluginField fields_sensors[] = {
+#ifdef ARDUINO_ESP8266_VERSION
+// Bacause ESP8266 has only one ADC , the mapping is applied A3-> A0, A4 -> A0+10, A5 -> A0-10
+  {
+    .name = "pin-A3",
+    .fetch = [](PseudoMuninPluginField* f) { f->value = analogRead(A0); }
+  },
+  {
+    .name = "pin-A4",
+    .fetch = [](PseudoMuninPluginField* f) { f->value = analogRead(A0) + 10; }
+  },
+  {
+    .name = "pin-A5",
+    .fetch = [](PseudoMuninPluginField* f) { f->value = analogRead(A0) - 10; }
+  },
+#else
   // draw the sensor values of A3-A5 pins on one graph
   {
     .name = "pin-A3",
@@ -43,6 +63,7 @@ PseudoMuninPluginField fields_sensors[] = {
     .name = "pin-A5",
     .fetch = [](PseudoMuninPluginField* f) { f->value = analogRead(A5); }
   },
+#endif
 };
 
 // draw the 2 graphs 'uptime' and 'sensors'

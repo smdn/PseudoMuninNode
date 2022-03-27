@@ -19,7 +19,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#include <Arduino.h>
+#ifdef ARDUINO_ESP8266_VERSION
+#include <ESP8266WiFi.h>
+#else
 #include <WiFi.h>
+#endif
 #include <PseudoMuninNode.h>
 
 // field definitions of munin plugin
