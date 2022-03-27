@@ -14,7 +14,7 @@ PseudoMuninNode makes it unnecessary to prepare a separate server to run munin-n
 The list of devices or modules that confirmed PseudoMuninNode works.
 
 - ESP32 / ESP-WROOM-32
-- ESP8266 (@kuwatay, #4)
+- ESP8266 ([@kuwatay](https://github.com/kuwatay), #4)
 
 # Example code
 The code below is a snippet that makes the PseudoMuninNode work.
