@@ -2,12 +2,19 @@
 
 PseudoMuninNode
 ===========
-PseudoMuninNode is a simple library for running [munin-node](http://guide.munin-monitoring.org/en/latest/architecture/index.html) compatible server on ESP32.
+PseudoMuninNode is a simple library for running [munin-node](http://guide.munin-monitoring.org/en/latest/architecture/index.html) compatible server on the devices that supports Wi-Fi like ESP32 and similar ones.
 
-By behaviouring ESP32 as a munin-node, various telemetry such as sensor values can be aggregated directly by [Munin](http://munin-monitoring.org/). 
-PseudoMuninNode makes it unnecessary to prepare a separate server to run munin-node, such as a PC or Raspberry Pi.
+By behaviouring your device as a munin-node, various telemetries such as sensor values can be aggregated directly by [Munin](http://munin-monitoring.org/).
 
 ![architecture](https://github.com/smdn/PseudoMuninNode/blob/images/readme/architecture.png)
+
+PseudoMuninNode makes it unnecessary to prepare a separate server to run munin-node, such as a PC or Raspberry Pi.
+
+## Devices and modules
+The list of devices or modules that confirmed PseudoMuninNode works.
+
+- ESP32 / ESP-WROOM-32
+- ESP8266 (@kuwatay, #4)
 
 # Example code
 The code below is a snippet that makes the PseudoMuninNode work.
