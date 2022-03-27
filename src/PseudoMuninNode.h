@@ -23,16 +23,24 @@
 #define PseudoMuninNode_h
 
 #include <Arduino.h>
+#ifdef ARDUINO_ESP8266_VERSION
+#include <ESP8266WiFi.h>
+#else
 #include <WiFi.h>
+#endif
 
 #include "PseudoMuninPlugin.h"
 
 class PseudoMuninNode {
   public:
-    static constexpr const char* VERSION = "1.0.2";
+    static constexpr const char* VERSION = "1.0.2A";
 
     static constexpr uint32_t DEFAULT_TIMEOUT_MILLISECONDS = 32 * 1000;
+#ifdef ARDUINO_ESP8266_VERSION
+    static constexpr const char* DEFAULT_HOSTNAME = "esp8266.localdomain";
+#else
     static constexpr const char* DEFAULT_HOSTNAME = "espressif32.localdomain";
+#endif
     static constexpr uint16_t DEFAULT_PORT = 4949;
 
     PseudoMuninNode(
@@ -43,7 +51,11 @@ class PseudoMuninNode {
       const char* hostname = DEFAULT_HOSTNAME,
       uint16_t port = DEFAULT_PORT
     ) :
+#ifdef ARDUINO_ESP8266_VERSION
+      m_server(port),  // ESP8622 has no maxClients argument
+#else
       m_server(port, maxClients),
+#endif
       m_pluginList(plugins),
       m_numberOfPlugins(numberOfPlugins),
       m_timeoutMilliseconds(timeoutMilliseconds),
