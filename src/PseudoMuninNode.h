@@ -33,7 +33,7 @@
 
 class PseudoMuninNode {
   public:
-    static constexpr const char* VERSION = "1.0.2A";
+    static constexpr const char* VERSION = "1.0.3";
 
     static constexpr uint32_t DEFAULT_TIMEOUT_MILLISECONDS = 32 * 1000;
 #ifdef ARDUINO_ESP8266_VERSION
